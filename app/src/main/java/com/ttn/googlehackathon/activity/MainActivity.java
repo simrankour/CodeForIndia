@@ -1,9 +1,11 @@
-package com.ttn.googlehackathon;
+package com.ttn.googlehackathon.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.ttn.googlehackathon.R;
 
 public class MainActivity extends Activity {
 
