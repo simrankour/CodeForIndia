@@ -5,3 +5,16 @@
 .DS_Store
 /build
 /captures
+givedb
+*.log
+*.pot
+*.pyc
+*.sublime-project
+*.sublime-workspace
+local_settings.py
+devdb
+swagger-ui-
+*.*.orig
+.coverage
+*.sqlite
+static

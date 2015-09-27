@@ -120,6 +120,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework'
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -156,3 +157,13 @@ LOGGING = {
         },
     }
 }
+
+
+#PARSE
+
+APPLICATION_ID = "CBwpNgfATI9LsrxrdyOv1YoA9m3myZAasFqZHiK8"
+REST_API_KEY = "T4bn763BuhJeD5WJMimBnlqzsUfOtfWrO7FVJtLA"
+MASTER_KEY = "I0gTNxdcn0hYSvb6g7iXWS0KHLdcZN0YyxxTEYe4"
+
+from parse_rest.connection import register
+register(APPLICATION_ID, REST_API_KEY, master_key=MASTER_KEY)
