@@ -8,4 +8,5 @@ package com.ttn.googlehackathon.utility;
  */
 public class AppConstant {
     public static final boolean DEBUG = true;
+    public static final String PREF_LOGIN_FILE_NAME = "login_details";
 }

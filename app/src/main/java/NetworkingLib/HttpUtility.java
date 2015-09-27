@@ -3,7 +3,6 @@ package NetworkingLib;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.text.TextUtils;
 import android.util.Log;
 
 import com.ttn.googlehackathon.MyApplication;
@@ -116,7 +115,7 @@ public class HttpUtility {
 
         if (!isNetworkAvailable(context)) {
             String error = context.getResources().getString(R.string.message_network_not_available);
-            MyApplication.getSingleton().getCustomToast(context, error).show();
+            MyApplication.getCustomToast(context, error).show();
             mResponse.setErrorMessage(error);
             return mResponse;
         }
@@ -125,7 +124,7 @@ public class HttpUtility {
             String url = encodeURL(httpRequest.getRequestURL());
             HttpGet httpGet = new HttpGet(url);
             if (AppConstant.DEBUG)
-                printRequest("get", url,"");
+                printRequest("get", url, "");
 
 
             HttpParams httpParameters = new BasicHttpParams();
@@ -174,7 +173,7 @@ public class HttpUtility {
         if (!isNetworkAvailable(context)) {
             String error = context.getResources().getString(R.string.message_network_not_available);
             try {
-                MyApplication.getSingleton().getCustomToast(context, error).show();
+                MyApplication.getCustomToast(context, error).show();
             } catch (Exception e) {
             }
             mResponse.setErrorMessage(error);
@@ -191,7 +190,7 @@ public class HttpUtility {
                 setHttpPostJsonStringEntity(context, httpRequest, httpPost);
             }
             if (AppConstant.DEBUG)
-                printRequest("post", url,"" + httpRequest.getRequestNameValuePairList() + "\t" + httpRequest.getRequestJson());
+                printRequest("post", url, "" + httpRequest.getRequestNameValuePairList() + "\t" + httpRequest.getRequestJson());
 
             HttpParams httpParameters = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpParameters, CONNECTION_TIME_OUT);

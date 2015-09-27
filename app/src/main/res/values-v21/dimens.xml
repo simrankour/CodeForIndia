@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="statusbar_height">24dp</dimen>
+    <dimen name="statusbar_height_negative">-24dp</dimen>
+    <dimen name="notification_counter_margin_top">42dp</dimen>
+    <dimen name="notification_counter_margin_left">29dp</dimen>
+    <dimen name="dialog_alert_list_divider_height">0dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+</resources>

@@ -20,26 +20,20 @@ import NetworkingLib.loader.LoaderHandler;
  */
 public class MyApplication extends Application {
 
-    private static MyApplication singleton;
     public static Typeface myTypeface;
-
-    public static synchronized MyApplication getSingleton() {
-        return singleton;
-    }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        singleton = this;
         myTypeface = Typeface.createFromAsset(getAssets(), "fonts/CalibreRegular.ttf");
-       //Facebook SDK initialized
+        //Facebook SDK initialized
         FacebookSdk.sdkInitialize(this.getApplicationContext());
 
         LoaderHandler.setContext(this);
         LoaderHandler.setLoggingEnabled(true);
     }
 
-    public Toast getCustomToast(Context context, String str) {
+    public static Toast getCustomToast(Context context, String str) {
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.view_toast, null);
         TextView textView = (TextView) view.findViewById(R.id.toasttext);

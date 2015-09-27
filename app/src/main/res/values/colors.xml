@@ -22,5 +22,15 @@
     <color name="windowBackground">#FFFFFF</color>
     <color name="navigationBarColor">#000000</color>
     <color name="colorAccent">#c8e8ff</color>
+    <color name="statusbar_background">#28282e</color>
+
+
+    <color name="checked_color">#4cbe6d</color>
+    <color name="unchecked_color">#bbbbbb</color>
+    <color name="accent_color_default">#68c5e7</color>
+    <color name="NavigationDrawerBackground">#1f1f25</color>
+
+    <color name="drawer_selected_color">#F44236</color>
+
 
 </resources>
